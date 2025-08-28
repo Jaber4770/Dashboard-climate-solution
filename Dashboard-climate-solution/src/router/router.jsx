@@ -12,64 +12,35 @@ import Settings from "../Pages/Settings/Settings";
 import Team from "../Pages/Team/Team";
 import DashboardLayout from "../Layout/DashboardLayout";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import ProtectedRoute from "./ProtectedRoute";
+
+let isLoggedIn = false;
 
 export const router = createBrowserRouter([
     {
+        path: "/login",
+        element: <Login onLogin={() => { isLoggedIn = true; window.location.href = "/overview"; }} />
+    },
+    {
         path: "/",
-        element: <DashboardLayout></DashboardLayout>,
+        element: (
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+                <DashboardLayout />
+            </ProtectedRoute>
+        ),
         children: [
-            {
-                index: true,
-                element: <Overview />
-            },
-            {
-                path: '/overview',
-                element: <Overview></Overview>
-            },
-            {
-                path: '/dashboard/about',
-                element: <About></About>
-            },
-            {
-                path: '/dashboard/alerts',
-                element: <Alert></Alert>
-            },
-            {
-                path: '/dashboard',
-                element: <Dashboard></Dashboard>
-            },
-            {
-                path: '/dashboard/data',
-                element: <Data></Data>
-            },
-            {
-                path: '/dashboard/help',
-                element: <Help></Help>
-            },
-            {
-                path: '/location',
-                element: <Location></Location>
-            },
-            {
-                path: '/dashboard/reports',
-                element: <Reports></Reports>
-            },
-            {
-                path: '/dashboard/sensors',
-                element: <Sensors></Sensors>
-            },
-            {
-                path: '/dashboard/settings',
-                element: <Settings></Settings>
-            },
-            {
-                path: '/dashboard/team',
-                element: <Team></Team>
-            },
-            {
-                path: '/login',
-                element: <Login></Login>
-            }
+            { index: true, element: <Overview /> },
+            { path: "/overview", element: <Overview /> },
+            { path: "/dashboard", element: <Dashboard /> },
+            { path: "/dashboard/about", element: <About /> },
+            { path: "/dashboard/alerts", element: <Alert /> },
+            { path: "/dashboard/data", element: <Data /> },
+            { path: "/dashboard/help", element: <Help /> },
+            { path: "/location", element: <Location /> },
+            { path: "/dashboard/reports", element: <Reports /> },
+            { path: "/dashboard/sensors", element: <Sensors /> },
+            { path: "/dashboard/settings", element: <Settings /> },
+            { path: "/dashboard/team", element: <Team /> }
         ]
     }
 ]);
