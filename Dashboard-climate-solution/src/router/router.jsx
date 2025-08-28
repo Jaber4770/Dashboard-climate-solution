@@ -19,6 +19,10 @@ export const router = createBrowserRouter([
         element: <DashboardLayout></DashboardLayout>,
         children: [
             {
+                index: true,
+                element: <Overview />
+            },
+            {
                 path: '/overview',
                 element: <Overview></Overview>
             },
@@ -29,10 +33,6 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/alerts',
                 element: <Alert></Alert>
-            },
-            {
-                path: '/login',
-                element: <Login></Login>
             },
             {
                 path: '/dashboard',
@@ -66,6 +66,10 @@ export const router = createBrowserRouter([
                 path: '/dashboard/team',
                 element: <Team></Team>
             },
+            {
+                path: '/login',
+                element: <Login></Login>
+            }
         ]
-    },
+    }
 ]);

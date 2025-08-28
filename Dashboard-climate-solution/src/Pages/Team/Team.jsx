@@ -29,13 +29,77 @@ const Team = () => {
             phone: '+192837465',
             linkedin: 'https://linkedin.com/in/mike',
             avatar: 'https://i.pravatar.cc/150?img=3'
+        },
+        {
+            id: 4,
+            name: 'Emma Watson',
+            role: 'UI/UX Designer',
+            email: 'emma@example.com',
+            phone: '+112233445',
+            linkedin: 'https://linkedin.com/in/emma',
+            avatar: 'https://i.pravatar.cc/150?img=4'
+        },
+        {
+            id: 5,
+            name: 'David Kim',
+            role: 'DevOps Engineer',
+            email: 'david@example.com',
+            phone: '+223344556',
+            linkedin: 'https://linkedin.com/in/david',
+            avatar: 'https://i.pravatar.cc/150?img=5'
+        },
+        {
+            id: 6,
+            name: 'Sophia Brown',
+            role: 'QA Engineer',
+            email: 'sophia@example.com',
+            phone: '+334455667',
+            linkedin: 'https://linkedin.com/in/sophia',
+            avatar: 'https://i.pravatar.cc/150?img=6'
+        },
+        {
+            id: 7,
+            name: 'James Wilson',
+            role: 'Data Scientist',
+            email: 'james@example.com',
+            phone: '+445566778',
+            linkedin: 'https://linkedin.com/in/james',
+            avatar: 'https://i.pravatar.cc/150?img=7'
+        },
+        {
+            id: 8,
+            name: 'Olivia Martinez',
+            role: 'Business Analyst',
+            email: 'olivia@example.com',
+            phone: '+556677889',
+            linkedin: 'https://linkedin.com/in/olivia',
+            avatar: 'https://i.pravatar.cc/150?img=8'
+        },
+        {
+            id: 9,
+            name: 'Daniel Roberts',
+            role: 'Security Specialist',
+            email: 'daniel@example.com',
+            phone: '+667788990',
+            linkedin: 'https://linkedin.com/in/daniel',
+            avatar: 'https://i.pravatar.cc/150?img=9'
+        },
+        {
+            id: 10,
+            name: 'Lily Evans',
+            role: 'Content Strategist',
+            email: 'lily@example.com',
+            phone: '+778899001',
+            linkedin: 'https://linkedin.com/in/lily',
+            avatar: 'https://i.pravatar.cc/150?img=10'
         }
     ];
+
 
     return (
         <div className="p-6">
             <h1 className="text-3xl font-bold mb-6">Meet Our Team</h1>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {members.map((member) => (
                     <div
                         key={member.id}
