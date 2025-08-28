@@ -3,10 +3,11 @@ import { Eye, Download, FileText, CheckCircle, AlertTriangle } from 'lucide-reac
 
 const Reports = () => {
     const reports = [
-        { id: 1, title: 'Monthly Climate Report', status: 'Completed', date: '2025-08-01' },
-        { id: 2, title: 'Air Quality Analysis', status: 'Pending', date: '2025-08-10' },
-        { id: 3, title: 'Water Usage Report', status: 'Completed', date: '2025-08-15' },
-        { id: 4, title: 'Sensor Performance', status: 'Warning', date: '2025-08-20' },
+        { id: 1, title: 'Global Impact of Dirty Cooking Fuels', status: 'Completed', date: '2025-07-15' },
+        { id: 2, title: 'Adoption of Clean Cooking Technologies', status: 'Pending', date: '2025-08-05' },
+        { id: 3, title: 'Black Carbon Emissions Analysis', status: 'Completed', date: '2025-08-10' },
+        { id: 4, title: 'Sensor Deployment in 30 Countries', status: 'Warning', date: '2025-08-20' },
+        { id: 5, title: 'Projected 5x Growth for 2026', status: 'Pending', date: '2025-08-25' },
     ];
 
     const getStatusIcon = (status) => {

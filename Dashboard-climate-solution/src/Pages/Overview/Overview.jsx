@@ -1,12 +1,36 @@
 import React from 'react';
-import { Users, Activity, Database, Bell } from 'lucide-react';
+import { Users, Activity, Database, TrendingUp } from 'lucide-react';
 
 const Overview = () => {
     const metrics = [
-        { id: 1, title: 'Total Users', value: 1280, icon: <Users className="w-6 h-6 text-white" />, color: 'bg-blue-500' },
-        { id: 2, title: 'Active Sensors', value: 56, icon: <Activity className="w-6 h-6 text-white" />, color: 'bg-green-500' },
-        { id: 3, title: 'Data Points', value: 10234, icon: <Database className="w-6 h-6 text-white" />, color: 'bg-orange-500' },
-        { id: 4, title: 'Alerts', value: 12, icon: <Bell className="w-6 h-6 text-white" />, color: 'bg-red-500' },
+        {
+            id: 1,
+            title: 'People Impacted',
+            value: '3B+',
+            icon: <Users className="w-6 h-6 text-white" />,
+            color: 'bg-blue-600'
+        },
+        {
+            id: 2,
+            title: 'Sensors Deployed',
+            value: '25,000+',
+            icon: <Activity className="w-6 h-6 text-white" />,
+            color: 'bg-green-600'
+        },
+        {
+            id: 3,
+            title: 'Emissions Monitored',
+            value: '25%',
+            icon: <Database className="w-6 h-6 text-white" />,
+            color: 'bg-orange-600'
+        },
+        {
+            id: 4,
+            title: 'Projected Growth',
+            value: '5x (2026)',
+            icon: <TrendingUp className="w-6 h-6 text-white" />,
+            color: 'bg-purple-600'
+        },
     ];
 
     return (
